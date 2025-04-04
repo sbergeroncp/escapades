@@ -11,7 +11,7 @@ Here is some text.
 ⬇️
 
 ```blocks
-scene.setBackgroundImage(assets.water_background)
+scene.setBackgroundImage(assets.background1)
 
 ```
 
@@ -23,6 +23,5 @@ Hello !
 ## Step 3
 
 Grats !
-
 
 
