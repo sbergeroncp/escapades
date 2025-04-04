@@ -7,7 +7,7 @@ Here is some text.
 ⬇️
 
 ```blocks
-scene.setBackgroundImage(tutorial_asset_exemple.forest1)
+scene.setBackgroundImage(assets.water_background)
 
 ```
 
@@ -21,6 +21,6 @@ Hello !
 Grats !
 
 ```package
-tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
+assets=github:sbergeroncp/assets
 ```
 
