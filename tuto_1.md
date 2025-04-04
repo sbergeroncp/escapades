@@ -2,7 +2,7 @@
 
 ```package
 
-tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
+assets=github:sbergeroncp/assets
 
 ```
 
