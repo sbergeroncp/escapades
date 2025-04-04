@@ -4,11 +4,13 @@
 assets=github:sbergeroncp/assets
 ```
 
+## Showdialog 
+
+Test
+
 ## Step 1
 
-Here is some text.
-
-⬇️
+Ajoute le bloc définir image dans le bloc au démarrage.
 
 ```blocks
 scene.setBackgroundImage(assets.background1)
@@ -17,11 +19,7 @@ scene.setBackgroundImage(assets.background1)
 
 ## Step 2
 
-Hello !
+Utilise l'indice au besoin.
 
-
-## Step 3
-
-Grats !
 
 
