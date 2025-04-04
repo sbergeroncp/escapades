@@ -21,5 +21,10 @@ scene.setBackgroundImage(assets.background1)
 
 Utilise l'indice au besoin.
 
+```blocks
+
+let mySprite = sprites.create(assets.perso1, SpriteKind.Player)
+
+```
 
 
