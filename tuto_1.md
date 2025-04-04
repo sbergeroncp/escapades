@@ -1,9 +1,6 @@
 # Tutoriel 1
-
 ```package
-
 assets=github:sbergeroncp/assets
-
 ```
 
 ## @showdialog
