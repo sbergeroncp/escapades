@@ -4,6 +4,8 @@
 
 Here is some text.
 
+⬇️
+
 ```blocks
 scene.setBackgroundImage(tutorial_asset_exemple.forest1)
 
