@@ -9,8 +9,8 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "tuto_1.md",
-        "tutorial-info-cache.json"
+        "tutorial-info-cache.json",
+        "tuto_a.md"
     ],
     "testFiles": [
         "test.ts"
