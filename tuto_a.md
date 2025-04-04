@@ -19,6 +19,8 @@ scene.setBackgroundImage(assets.background1)
 
 ## Step 2
 
+Crée un personnage
+
 Utilise l'indice au besoin.
 
 ```blocks
