@@ -1,5 +1,11 @@
 # Tutoriel 6
 
+```package
+
+tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
+
+```
+
 ## @showdialog
 
 Mon premier Shoot 'Em Up !
@@ -16,9 +22,5 @@ scene.setBackgroundImage(tutorial_asset_exemple.background2)
 
 ```
 
-```package
 
-tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
-
-```
 
