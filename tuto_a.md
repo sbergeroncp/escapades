@@ -2,7 +2,7 @@
 
 ```package
 
-assets=github:sbergeroncp/assets
+tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 
 ```
 
@@ -18,7 +18,7 @@ Clique sur le carré gris et sélectionne la même image que dans l'indice.
 
 ```blocks
 
-scene.setBackgroundImage(assets.background1)
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
 
 ```
 
