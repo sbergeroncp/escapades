@@ -18,7 +18,7 @@ Clique sur le carré gris et sélectionne la même image que dans l'indice.
 
 ```blocks
 
-scene.setBackgroundImage(tutorial_asset_exemple.background2)
+scene.setBackgroundImage(tutorial_asset_exemple.background3)
 
 ```
 
