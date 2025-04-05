@@ -1,32 +1,24 @@
-# My Tutorial
+# Tutoriel 6
+
+## @showdialog
+
+Mon premier Shoot 'Em Up !
+
+## Étape 1
+
+Ajoute le bloc ``||scene:définir image d'arrière-plan||`` (onglet ``||scene:Scène||``) dans le bloc ``||loops:au démarrage||``.
+
+Clique sur le carré gris et sélectionne la même image que dans l'indice.
+
+```blocks
+
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+
+```
 
 ```package
-assets=github:sbergeroncp/assets
-```
 
-## Showdialog 
+tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 
-Test
-
-## Step 1
-
-Ajoute le bloc définir image dans le bloc au démarrage.
-
-```blocks
-scene.setBackgroundImage(assets.background1)
-
-```
-
-## Step 2
-
-Crée un personnage
-
-Utilise l'indice au besoin.
-
-```blocks
-
-let mySprite = sprites.create(assets.perso1, SpriteKind.Player)
-
-```
-
+``
 
