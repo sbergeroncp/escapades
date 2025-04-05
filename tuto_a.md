@@ -60,11 +60,41 @@ Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||sprites:Sprites||
 
 Clique sur le carré gris et sélectionne le personnage de l'indice.
 
-📝 Renomme le personnage ``||variables:perso1||``
 
 ```blocks
 scene.setBackgroundColor(15)
 game.splash("Escapades", "virtuelles")
 scene.setBackgroundImage(tutorial_asset_exemple.background2)
-let perso1 = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+```
+
+## Étape 6 
+
+Ajoute le bloc ``||scene:secouer la caméra||`` (onglet ``||scene:Scène||``) sous le bloc ``||variables:définir mySprite||``.
+
+Remplace la valeur ``||scene:4|`` par ``||scene:5|``.
+
+Remplace la valeur ``||scene:500|`` par ``||scene:1000|``.
+
+```blocks
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+```
+
+## Étape 7 
+
+Ajoute le bloc ``||controller:déplacer avec les boutons||`` (onglet ``||controller:Contrôleur||``) sous le bloc ``||scene:secouer la caméra||``.
+
+🎮🎮🎮
+
+```blocks
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
 ```
