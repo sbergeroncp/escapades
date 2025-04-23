@@ -1,6 +1,14 @@
-
-767778798081828384858687888990919293949596979899100101102
 # Tutoriel 1
+
+```blockconfig.global
+scene.setBackgroundColor(10)
+game.splash("Escapades virtuelles")
+```
+
+```template
+scene.setBackgroundColor(10)
+game.splash("Escapades virtuelles")
+```
 
 ```package
 tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
