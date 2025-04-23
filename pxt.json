@@ -10,7 +10,8 @@
         "main.blocks",
         "main.ts",
         "tutorial-info-cache.json",
-        "tuto_a.md"
+        "tuto_a.md",
+        "tuto_b.md"
     ],
     "testFiles": [
         "test.ts"
