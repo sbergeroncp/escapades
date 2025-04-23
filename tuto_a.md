@@ -1,10 +1,5 @@
 # Tutoriel 1
 
-```template
-scene.setBackgroundColor(10)
-game.splash("Escapades virtuelles")
-```
-
 ```package
 tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 ```
