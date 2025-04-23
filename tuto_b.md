@@ -12,6 +12,8 @@ tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 
 Teste !
 
+~hint What does that mean? 🤷🏽
+
 ```template
 scene.setBackgroundColor(10)
 game.splash("Escapades virtuelles")
