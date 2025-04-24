@@ -4,15 +4,6 @@
 tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 ```
 
-```template
-scene.setBackgroundColor(15)
-game.splash("Escapades", "virtuelles")
-scene.setBackgroundImage(tutorial_asset_exemple.background2)
-let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
-scene.cameraShake(5, 1000)
-controller.moveSprite(mySprite)
-```
-
 ## @showdialog
 
 🎮🎮🎮 Continue de créer l'adaptation vidéoludique du livre Escapades virtuelles. 🎮🎮🎮
@@ -358,4 +349,13 @@ scene.cameraShake(5, 1000)
 controller.moveSprite(mySprite)
 let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
 info.setScore(0)
+```
+
+```template
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
 ```
