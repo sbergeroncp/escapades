@@ -12,7 +12,9 @@
         "tutorial-info-cache.json",
         "tuto_a.md",
         "tuto_b.md",
-        "tuto_1.md"
+        "tuto_1.md",
+        "tuto_2.md",
+        "tuto_3.md"
     ],
     "testFiles": [
         "test.ts"

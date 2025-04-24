@@ -1,101 +1,117 @@
-# Tutoriel 1
+## Étape 8
 
-```package
-tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
-```
+Ajoute le bloc ``||controller:quand bouton A est appuyé||`` (onglet ``||controller:Contrôleur||``) dans la zone de programmation.
 
-## @showdialog
-
-🎮🎮🎮 Crée l'adaptation vidéoludique du livre Escapades virtuelles. 🎮🎮🎮
-
-## Étape 1
-
-Ajoute le bloc ``||scene:définir couleur d'arrière-plan||`` (onglet ``||scene:Scène||``) dans le bloc ``||loops:au démarrage||``.
-
-Clique sur le carré gris et sélectionne la couleur ⬛.
-
-```blocks
-scene.setBackgroundColor(15)
-```
-
-## Étape 2
-
-Ajoute le bloc ``||game:splash||`` (onglet ``||scene:Scène||``) sous le bloc ``||scene:définir couleur d'arrière-plan||`` .
-
-Appuie sur le ➕ pour ajouter une autre case.
-
-```blocks
-scene.setBackgroundColor(15)
-game.splash("", "")
-```
-
-## Étape 3
-
-Modifie le bloc ``||game:splash||``.
-
-Écris **Escapades** dans la case de gauche.
-
-Écris **virtuelles** dans la case de droite.
-
-```blocks
-scene.setBackgroundColor(15)
-game.splash("Escapades", "virtuelles")
-```
-
-## Étape 4
-
-Ajoute le bloc ``||scene:définir image d'arrière-plan||`` (onglet ``||scene:Scène||``) sous le bloc ``||game:splash||``.
-
-Clique sur le carré gris et sélectionne l'image de l'indice.
-
-```blocks
-scene.setBackgroundColor(15)
-game.splash("Escapades", "virtuelles")
-scene.setBackgroundImage(tutorial_asset_exemple.background2)
-```
-
-## Étape 5 
-
-Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||sprites:Sprites||``) sous le bloc ``||scene:définir image d'arrière-plan||``.
-
-Clique sur le carré gris et sélectionne le personnage de l'indice.
-
-
-```blocks
-scene.setBackgroundColor(15)
-game.splash("Escapades", "virtuelles")
-scene.setBackgroundImage(tutorial_asset_exemple.background2)
-let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
-```
-
-## Étape 6 
-
-Ajoute le bloc ``||scene:secouer la caméra||`` (onglet ``||scene:Scène||``) sous le bloc ``||variables:définir mySprite||``.
-
-Remplace la valeur ``||scene:4|`` par ``||scene:5|``.
-
-Remplace la valeur ``||scene:500|`` par ``||scene:1000|``.
-
-```blocks
-scene.setBackgroundColor(15)
-game.splash("Escapades", "virtuelles")
-scene.setBackgroundImage(tutorial_asset_exemple.background2)
-let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
-scene.cameraShake(5, 1000)
-```
-
-## Étape 7 
-
-Ajoute le bloc ``||controller:déplacer avec les boutons||`` (onglet ``||controller:Contrôleur||``) sous le bloc ``||scene:secouer la caméra||``.
-
+Remplace la valeur ``||controller:A|`` par ``||controller:gauche|``.
 🎮🎮🎮
 
 ```blocks
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
 scene.setBackgroundColor(15)
 game.splash("Escapades", "virtuelles")
 scene.setBackgroundImage(tutorial_asset_exemple.background2)
 let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
 scene.cameraShake(5, 1000)
 controller.moveSprite(mySprite)
+
 ```
+
+## Étape 8
+
+Ajoute le bloc ``||animation:animer||`` (onglet ``||animation:Animation||``) dans le bloc ``||controller:quand bouton gauche est appuyé||`.
+
+Sélectionne la même animation que celle proposée dans l'indice.
+
+Remplace la valeur ``||animation:500||`` par ``||animation:100||``.
+
+Active la valeur ``||animation:en boucle ON||``.
+
+🎮🎮🎮
+
+```blocks
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    mySprite,
+    [img`
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f d d d d 4 e e e f . . . 
+        . . . f e 4 4 4 e e f f . . . . 
+        . . . f 2 2 2 e d d 4 . . . . . 
+        . . . f 2 2 2 e d d e . . . . . 
+        . . . f 5 5 4 f e e f . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . . . . f f f . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f d d d e e e e e f . . . 
+        . . . f e 4 e d d 4 f . . . . . 
+        . . . f 2 2 e d d e f . . . . . 
+        . . f f 5 5 f e e f f f . . . . 
+        . . f f f f f f f f f f . . . . 
+        . . . f f f . . . f f . . . . . 
+        `,img`
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f d d d d 4 e e e f . . . 
+        . . . f e 4 4 4 e e f f . . . . 
+        . . . f 2 2 2 e d d 4 . . . . . 
+        . . . f 2 2 2 e d d e . . . . . 
+        . . . f 5 5 4 f e e f . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . . . . f f f . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . f f f f f f . . . . . . 
+        . . . f 2 f e e e e f f . . . . 
+        . . f 2 2 2 f e e e e f f . . . 
+        . . f e e e e f f e e e f . . . 
+        . f e 2 2 2 2 e e f f f f . . . 
+        . f 2 e f f f f 2 2 2 e f . . . 
+        . f f f e e e f f f f f f f . . 
+        . f e e 4 4 f b e 4 4 e f f . . 
+        . . f e d d f 1 4 d 4 e e f . . 
+        . . . f d d d d 4 e e e f . . . 
+        . . . f e 4 4 4 e d d 4 . . . . 
+        . . . f 2 2 2 2 e d d e . . . . 
+        . . f f 5 5 4 4 f e e f . . . . 
+        . . f f f f f f f f f f . . . . 
+        . . . f f f . . . f f . . . . . 
+        `],
+    100,
+    true
+    )
+})
+let mySprite: Sprite = null
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
 
