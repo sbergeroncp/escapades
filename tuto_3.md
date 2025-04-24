@@ -303,45 +303,14 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     info.changeScoreBy(1)
     mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, 10))
 })
-let mySprite2: Sprite = null
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
 controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
+let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
+info.setScore(0)
 ```
 
 ## Étape 11
