@@ -1,8 +1,9 @@
-# Tutoriel - Introduction
+# Tutoriel - Introduction (suite)
 
 ```package
 tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 ```
+
 ```template
 scene.setBackgroundColor(15)
 game.splash("Escapades", "virtuelles")
@@ -14,20 +15,18 @@ controller.moveSprite(mySprite)
 
 ## @showdialog
 
-🎮🎮🎮 Crée l'adaptation vidéoludique du livre Escapades virtuelles. 🎮🎮🎮
+🎮🎮🎮 Continue de créer l'adaptation vidéoludique du livre Escapades virtuelles. 🎮🎮🎮
 
 ## Étape 1
-
-## Étape 8
 
 Ajoute le bloc ``||controller:quand bouton A est appuyé||`` (onglet ``||controller:Contrôleur||``) dans la zone de programmation.
 
 Remplace la valeur ``||controller:A|`` par ``||controller:gauche|``.
+
 🎮🎮🎮
 
 ```blocks
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-	
 })
 scene.setBackgroundColor(15)
 game.splash("Escapades", "virtuelles")
@@ -35,14 +34,15 @@ scene.setBackgroundImage(tutorial_asset_exemple.background2)
 let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
 scene.cameraShake(5, 1000)
 controller.moveSprite(mySprite)
-
 ```
 
-## Étape 8
+## Étape 2
 
 Ajoute le bloc ``||animation:animer||`` (onglet ``||animation:Animation||``) dans le bloc ``||controller:quand bouton gauche est appuyé||`.
 
 Sélectionne la même animation que celle proposée dans l'indice.
+
+🦹‍♀️🧝‍♀️🧛‍🧜‍♀️ Tu peux également prendre un personnage féminin ! 🦹‍♀️🧝‍♀️🧛‍🧜‍♀
 
 Remplace la valeur ``||animation:500||`` par ``||animation:100||``.
 
@@ -134,4 +134,259 @@ scene.setBackgroundImage(tutorial_asset_exemple.background2)
 mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
 scene.cameraShake(5, 1000)
 controller.moveSprite(mySprite)
+```
 
+## Étape 3
+
+Duplique le bloc ``||controller:quand bouton gauche est appuyé||``
+
+Remplace la valeur ``||controller:gauche|`` par ``||controller:droite|``.
+
+Remplace la trame du bloc ``||animation:animer||`` par la bonne animation.
+
+## Étape 4
+
+Duplique le bloc ``||controller:quand bouton droite est appuyé||``
+
+Remplace la valeur ``||controller:droite|`` par ``||controller:haut|``.
+
+Remplace la trame du bloc ``||animation:animer||`` par la bonne animation.
+
+## Étape 5
+
+Duplique le bloc ``||controller:quand bouton haut est appuyé||``
+
+Remplace la valeur ``||controller:haut|`` par ``||controller:bas|``.
+
+Remplace la trame du bloc ``||animation:animer||`` par la bonne animation.
+
+## Étape 6
+
+Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||scroller:déplacer avec les boutons||``.
+
+*** Assure-toi que la valeur ``||variables:définir mySprite2||`` soit sélectionnée. ***
+
+Remplace la valeur ``||Sprites:Player||`` par ``||Sprites:Food /  Nourriture||``.
+
+Clique sur le carré gris pour sélectionner un lutin dans la Galerie.
+
+```blocks
+
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
+
+```
+
+## Étape 5
+
+Ajoute le bloc ``||info:définir le score||`` (onglet ``||info:Info||``) sous le bloc ``||variables:définir mySprite2||``.
+
+La valeur ``||info:0||`` demeure la même.
+
+```blocks
+
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
+info.setScore(0)
+
+```
+
+## Étape 6
+
+Glisse le bloc ``||Sprites:quand||`` (onglet ``||Sprites:Sprites||``) dans la zone de programmation.
+
+Remplace la valeur ``||Sprites:Player||`` de droite par la valeur ``||Sprites:Food||``.
+
+```blocks
+
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+	
+})
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
+info.setScore(0)
+    
+```
+
+## Étape 7
+
+Ajoute le bloc ``||info:modifier le score||`` dans le bloc ``||Sprites:quand||``.
+
+La valeur ``||info:1||`` du bloc ``||info:modifier le score||`` demeure la même.
+
+```blocks
+
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+
+})
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
+info.setScore(0)
+```
+
+## Étape 8
+
+Ajoute le bloc ``||Sprites:définir la position||`` (onglet ``||Sprites:Sprites)||`` sous le bloc ``||info:modifier le score||``.
+
+Remplace la valeur ``||variables:mySprite||`` par ``||variables:mySprite2||``.
+
+```blocks
+
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    mySprite2.setPosition(0, 0)
+})
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
+info.setScore(0)
+```
+
+## Étape 9
+
+Remplace les valeurs ``||Sprites:0||`` du bloc ``||Sprites:définir la position||`` par les blocs ``||math:choisir aléatoirement entre||`` (onglet ``||math:Maths||``).
+
+```blocks
+
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    mySprite2.setPosition(randint(0, 10), randint(0, 10))
+})
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
+info.setScore(0)
+    
+
+```
+
+## Étape 10
+
+Modifie le bloc ``||math:choisir aléatoirement entre||`` pour la valeur ``||Sprites:x||``.
+
+Remplace la valeur ``||math:10||`` du bloc ``||math:choisir aléatoirement entre||`` par le bloc ``||scene:largeur de l'écran||``.
+
+Regarde bien l'indice !
+
+```blocks
+
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, 10))
+})
+let mySprite2: Sprite = null
+scene.setBackgroundColor(1)
+let mySprite = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . b 5 5 b . . . 
+    . . . . . . b b b b b b . . . . 
+    . . . . . b b 5 5 5 5 5 b . . . 
+    . b b b b b 5 5 5 5 5 5 5 b . . 
+    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
+    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
+    . . b d 5 5 b 1 f f 5 4 4 c . . 
+    b b d b 5 5 5 d f b 4 4 4 4 b . 
+    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
+    c d d d c c b 5 5 5 5 5 5 5 b . 
+    c b d d d d d 5 5 5 5 5 5 5 b . 
+    . c d d d d d d 5 5 5 5 5 d b . 
+    . . c b d d d d d 5 5 5 b b . . 
+    . . . c c c c c c c c b b . . . 
+    `, SpriteKind.Player)
+controller.moveSprite(mySprite)
+mySprite2 = sprites.create(img`
+    . . . . . . . 6 . . . . . . . . 
+    . . . . . . 8 6 6 . . . 6 8 . . 
+    . . . e e e 8 8 6 6 . 6 7 8 . . 
+    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
+    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
+    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
+    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
+    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
+    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
+    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
+    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
+    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
+    e e 2 e 2 2 4 2 2 e e e c . . . 
+    e e e e 2 e 2 2 e e e c . . . . 
+    e e e 2 e e c e c c c . . . . . 
+    . c c c c c c c . . . . . . . . 
+    `, SpriteKind.Food)
+```
+
+## Étape 11
+
+Modifie le bloc ``||math:choisir aléatoirement entre||`` pour la valeur ``||Sprites:y||``.
+
+Remplace la valeur ``||math:10||`` du bloc ``||math:choisir aléatoirement entre||`` par le bloc ``||scene:hauteur de l'écran||``.
+
+Regarde bien l'indice.
+
+```blocks
+
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
+})
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
+info.setScore(0)
+```
+
+## Étape 12
+
+Ajoute le bloc ``||info:démarrer le compte à rebours||`` (onglet ``||info:Info||``) sous le bloc ``||Sprites:définir la position||``.
+
+Remplace la valeur ``||info:10||`` par ``||info:3||``.
+
+```blocks
+
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
+    info.startCountdown(3)
+})
+scene.setBackgroundColor(15)
+game.splash("Escapades", "virtuelles")
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
+let mySprite = sprites.create(tutorial_asset_exemple.perso1, SpriteKind.Player)
+scene.cameraShake(5, 1000)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(tutorial_asset_exemple.food1, SpriteKind.Food)
+info.setScore(0)
+```
