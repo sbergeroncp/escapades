@@ -101,4 +101,4 @@ controller.moveSprite(mySprite)
 
 ## @showdialog
 
-🎮🎮🎮 Félicitations ! Tu as terminé ta misiion. Continue ton aventure !🎮🎮🎮
+🎮🎮🎮 Félicitations ! Tu as terminé ta mission. Continue ton aventure !🎮🎮🎮
