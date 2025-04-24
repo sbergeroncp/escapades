@@ -42,7 +42,7 @@ Ajoute le bloc ``||animation:animer||`` (onglet ``||animation:Animation||``) dan
 
 Sélectionne la même animation que celle proposée dans l'indice.
 
-🦹‍♀️🧝‍♀️🧛‍🧜‍♀️ Tu peux également prendre un personnage féminin ! 🦹‍♀️🧝‍♀️🧛‍🧜‍♀
+🦹‍♀️🧝‍♀️🧛‍🧜‍♀️ Tu peux également prendre un personnage féminin !!! 🦹‍♀️🧝‍♀️🧛‍🧜‍♀
 
 Remplace la valeur ``||animation:500||`` par ``||animation:100||``.
 
